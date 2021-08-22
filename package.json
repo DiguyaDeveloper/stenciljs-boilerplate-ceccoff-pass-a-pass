@@ -21,9 +21,10 @@
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
     "lint": "concurrently npm:lint:*",
-    "lint:html": "prettier --write \"**/*.html\"",
-    "lint:json": "prettier --write \"**/*.json\"",
-    "lint:md": "prettier --write \"**/*.md\""
+    "prettier": "concurrently npm:prettier:*",
+    "prettier:html": "prettier --write \"**/*.html\"",
+    "prettier:json": "prettier --write \"**/*.json\"",
+    "prettier:md": "prettier --write \"**/*.md\""
   },
   "dependencies": {
     "@stencil/core": "2.7.0",
