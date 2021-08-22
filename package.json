@@ -26,10 +26,12 @@
     "prettier": "concurrently npm:prettier:*",
     "prettier:html": "prettier --write \"**/*.html\"",
     "prettier:json": "prettier --write \"**/*.json\"",
-    "prettier:md": "prettier --write \"**/*.md\""
+    "prettier:md": "prettier --write \"**/*.md\"",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@stencil/core": "2.7.0",
+    "husky": "^7.0.1",
     "typescript": "^4.3.5"
   },
   "devDependencies": {
