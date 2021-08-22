@@ -38,3 +38,11 @@ npm install stylelint
 npm install stylelint-config-recommended-scss
 npm install stylelint-scss
 ```
+
+## Husky
+
+This lib execute scripts to you define in pre-commit and pre-push rules
+
+```bash
+npm install husky
+```
