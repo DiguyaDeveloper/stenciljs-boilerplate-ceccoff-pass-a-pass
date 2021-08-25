@@ -23,10 +23,18 @@ npm i concurrently
 This lib validate code and sugest melhorias
 
 ```bash
-npm install eslint
-npm install eslint-config-prettier
-npm install eslint-plugin-jest
-npm install eslint-plugin-react
+npm install eslint --save-dev
+npm install eslint-config-prettier --save-dev
+npm install eslint-plugin-jest --save-dev
+npm install eslint-plugin-react --save-dev
+```
+
+## tsnode
+
+This lib usage with typescript and build project
+
+```bash
+npm install ts-node --save-dev
 ```
 
 ## Stylelint
@@ -34,9 +42,9 @@ npm install eslint-plugin-react
 This lib validate code {.scss, .css, .etc} and sugest melhorias
 
 ```bash
-npm install stylelint
-npm install stylelint-config-recommended-scss
-npm install stylelint-scss
+npm install stylelint  --save-dev
+npm install stylelint-config-recommended-scss --save-dev
+npm install stylelint-scss --save-dev
 ```
 
 ## Husky
@@ -44,5 +52,13 @@ npm install stylelint-scss
 This lib execute scripts to you define in pre-commit and pre-push rules
 
 ```bash
-npm install husky
+npm install husky --save-dev
+```
+
+## Storybook
+
+This lib create a utilization storybook to show your componentes documentation in browser
+
+```bash
+npm storybook install --save-dev
 ```
