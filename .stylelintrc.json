@@ -11,12 +11,6 @@
       }
     ],
     "property-case": "lower",
-    "selector-type-no-unknown": [
-      true,
-      {
-        "ignoreTypes": ["/^calcite-/"]
-      }
-    ],
     "unit-case": "lower"
   }
 }

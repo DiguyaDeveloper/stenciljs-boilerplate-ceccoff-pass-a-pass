@@ -1,7 +1,8 @@
-import {Config} from '@stencil/core';
+import { Config } from '@stencil/core';
 
 export const config: Config = {
   namespace: 'stenciljs-ceccoff-boilerplate',
+  globalStyle: 'src/assets/styles/global.scss',
   outputTargets: [
     {
       type: 'dist',
