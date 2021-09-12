@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, h, VNode } from '@stencil/core';
 import { format } from '../../utils/utils';
 
 @Component({
@@ -26,7 +26,7 @@ export class MyComponent {
     return format(this.first, this.middle, this.last);
   }
 
-  render() {
+  render(): VNode {
     return <div>Hello, World! I'm {this.getText()}</div>;
   }
 }

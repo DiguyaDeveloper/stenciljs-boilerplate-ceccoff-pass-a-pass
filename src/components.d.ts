@@ -5,7 +5,16 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { ToastType } from "./components/cf-toast/toast.type";
 export namespace Components {
+    interface CfToast {
+        "content": string;
+        /**
+          * The first name
+         */
+        "header": string;
+        "type": ToastType;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -22,6 +31,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLCfToastElement extends Components.CfToast, HTMLStencilElement {
+    }
+    var HTMLCfToastElement: {
+        prototype: HTMLCfToastElement;
+        new (): HTMLCfToastElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -29,10 +44,19 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "cf-toast": HTMLCfToastElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface CfToast {
+        "content"?: string;
+        /**
+          * The first name
+         */
+        "header"?: string;
+        "type"?: ToastType;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -48,6 +72,7 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "cf-toast": CfToast;
         "my-component": MyComponent;
     }
 }
@@ -55,6 +80,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "cf-toast": LocalJSX.CfToast & JSXBase.HTMLAttributes<HTMLCfToastElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
